@@ -1,39 +1,56 @@
-function convertToUpperCase(text) {
-    return text.toUpperCase()
-}
+// function convertToUpperCase(text) {
+//     return text.toUpperCase()
+// }
 
-console.log(convertToUpperCase("blueberry"))
+// console.log(convertToUpperCase("blueberry"))
 
 
 // This is required for the test to function properly  
-// module.exports = { calculateTax, convertToUpperCase, findMaximum, isPalindrome, calculateDiscountedPrice };
+module.exports = { calculateTax, convertToUpperCase, findMaximum, isPalindrome, calculateDiscountedPrice };
 
 
-function calculateTax(input){
-    let tax = input * 0.1
-    return tax
+function calculateTax(amount){
+    let taxValue = amount*0.1;
+    return taxValue;
 
 }
-console.log(calculateTax(4000))
+// console.log(calculateTax(4000));
+
+function  convertToUpperCase(text) {
+    return text.toUpperCase();
+}
+
+// console.log(convertToUpperCase("blueberry"));
+
+
+
+
 
 function findMaximum(num1, num2) {
     if(num1 >num2){
-        return num1
+        return num1;
     }
     else{
-        return num2
+        return num2;
     }
 }
 
 function isPalindrome(word) {
     let reversedWord= word.split('').reverse().join('');
-    return word===reversedWord;
+    if(word===reversedWord) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
-console.log(isPalindrome("radar"));
-console.log(isPalindrome("coconut"));
+// console.log(isPalindrome("radar"));
+// console.log(isPalindrome("coconut"));
 
 function calculateDiscountedPrice(originalPrice,discountPercentage) {
     let discountAmount= (originalPrice*discountPercentage)/100;
     let finalPrice= originalPrice-discountAmount;
     return finalPrice;
 }
+// console.log(calculateDiscountedPrice(100,20));
+// console.log(calculateDiscountedPrice(50,10));
